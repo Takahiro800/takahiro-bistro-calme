@@ -20,7 +20,11 @@
 							<article id="post-<?php the_ID(); ?>" <?php post_class('news'); ?>>
 								<div class="news_pic">
 									<a href="<?php the_permalink(); ?>">
-										<?php the_post_thumbnail('medium'); ?>
+										<?php if (has_post_thumbnail() ): ?>
+											<?php the_post_thumbnail('medium'); ?>
+										<?php else: ?>
+											<img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/noimage_600x400.png" alt="">
+										<?php endif; ?>
 									</a>
 								</div>
 								<div class="news_meta">
