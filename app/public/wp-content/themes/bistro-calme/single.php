@@ -37,14 +37,7 @@
 				</div>
 
 				<div class="col-12 col-md-3">
-					<aside class="archive">
-						<h2 class="archive_title">カテゴリ 一覧</h2>
-						<ul class="archive_list">
-							<li><a href="#">お知らせ</a></li>
-							<li><a href="#">コラム</a></li>
-						</ul>
-					</aside>
-
+					<?php get_sidebar('categories'); ?>
 					<aside class="archive">
 						<h2 class="archive_title">月別アーカイブ</h2>
 						<ul class="archive_list">
