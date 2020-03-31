@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <?php if (have_posts()): ?>
-	<?php while (have_posts): the_post(); ?>
+	<?php while (have_posts() ): the_post(); ?>
 
 		<h2 class="pageTitle"><?php the_title(); ?><span>
 			<?php echo strtoupper($post->post_name); ?>
@@ -14,7 +14,7 @@
 				</div>
 			</div>
 		</main>
-		<?php  ?>
+
 	<?php endwhile; ?>
 <?php endif; ?>
 
