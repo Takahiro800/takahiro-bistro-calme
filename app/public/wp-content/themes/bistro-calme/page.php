@@ -1,17 +1,21 @@
 <?php get_header(); ?>
 
-<h2 class="pageTitle">わたしたちについて<span>ABOUT</span></h2>
+<?php if (have_posts()): ?>
+	<?php while (have_posts): the_post(); ?>
 
-	<main class="main">
-		<div class="container">
-			<div class="content">
-				<figure>
-					<img src="./assets/img/page/about-1.jpg" alt="">
-				</figure>
-				<p>BISTRO CALME はソムエリのいるカジュアルなワインバーよりなビストロです。</p>
-				<p>野菜、肉、魚を食材とした月替わりの各種料理とデザートをご提供しております。</p>
+		<h2 class="pageTitle"><?php the_title(); ?><span>
+			<?php echo strtoupper($post->post_name); ?>
+		</span></h2>
+
+		<main class="main">
+			<div class="container">
+				<div class="content">
+					<?php the_content(); ?>
+				</div>
 			</div>
-		</div>
-	</main>
+		</main>
+		<?php  ?>
+	<?php endwhile; ?>
+<?php endif; ?>
 
 <?php get_footer(); ?>
