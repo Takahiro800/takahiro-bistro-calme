@@ -6,7 +6,7 @@ $comment_form_args = array(
 comment_form( $comment_form_args );
 if ( have_comments() ) :
 ?>
-    <p><?php comments_number(); ?></p>
+    <p><?php comments_number('コメントはありません', 'コメントが１件あります', 'コメントが%件あります'); ?></p>
     <ol class="commentlist">
         <?php wp_list_comments(); ?>
     </ol>
