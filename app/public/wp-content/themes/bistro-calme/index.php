@@ -3,6 +3,8 @@
 
 	<h2 class="pageTitle">最新情報<span>NEWS</span></h2>
 
+	<?php get_template_part('template-parts/breadcrumb'); ?>
+
 	<main class="main">
 		<div class="container">
 			<div class="row">
@@ -13,6 +15,8 @@
 						<h2 class="main_title"><?php wp_title(''); ?></h2>
           <?php endif; ?>
 			<div class="row">
+
+			<?php if (function_exists( 'wp_pagenavi' ) ) { wp_pagenavi(); } ?>
 
 						<?php if (have_posts() ) : ?>
 							<?php while ( have_posts() ) : the_post(); ?>
