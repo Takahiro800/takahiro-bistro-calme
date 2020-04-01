@@ -31,6 +31,8 @@
 			<div class="header_desc">
 				<p><?php bloginfo('description'); ?></p>
 			</div>
+
+			<?php get_search_form(); ?>
 		</div>
 
 		<div class="header_links">
