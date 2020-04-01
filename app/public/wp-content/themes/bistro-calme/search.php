@@ -13,6 +13,10 @@
 								<?php get_template_part('template-parts/loop', 'news') ?>
 							</div>
 						<?php endwhile; ?>
+						<?php else: ?>
+							<div class="col-12 text-center">
+								<p>検索結果はありませんでした<p>
+							</div>
 					<?php endif; ?>
 
 				</div>
