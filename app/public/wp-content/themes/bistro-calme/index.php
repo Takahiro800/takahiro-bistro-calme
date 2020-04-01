@@ -16,6 +16,8 @@
           <?php endif; ?>
 			<div class="row">
 
+			<?php if (function_exists( 'wp_pagenavi' ) ) { wp_pagenavi(); } ?>
+
 						<?php if (have_posts() ) : ?>
 							<?php while ( have_posts() ) : the_post(); ?>
 								<div class="col-md-4">
