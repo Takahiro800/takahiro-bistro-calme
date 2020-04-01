@@ -31,11 +31,6 @@
 			<div class="header_desc">
 				<p><?php bloginfo('description'); ?></p>
 			</div>
-
-			<form action="<?php echo home_url('/'); ?>" method="get"  class="header_search">
-				<input type="text" name="s" value="<?php the_search_query(); ?>"  placeholder="キーワードを入力">
-				<i class="fas fa-search"></i>
-			</form>
 		</div>
 
 		<div class="header_links">
