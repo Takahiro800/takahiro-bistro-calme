@@ -4,14 +4,18 @@ $comment_form_args = array(
     'title_reply' => 'コメント投稿フォーム',
 );
 comment_form( $comment_form_args );
-if ( have_comments() ) :
-?>
+if ( have_comments() ) : ?>
+
     <p><?php comments_number('コメントはありません', 'コメントが１件あります', 'コメントが%件あります'); ?></p>
     <ol class="commentlist">
-        <?php wp_list_comments(); ?>
+        <?php
+        $wp_list_comments_args = array(
+            'avatar_size' => '50'
+        );
+        wp_list_comments($wp_list_comments_args); ?>
     </ol>
+
 <?php
 paginate_comments_links();
-endif;
-?>
+endif; ?>
 </section>
