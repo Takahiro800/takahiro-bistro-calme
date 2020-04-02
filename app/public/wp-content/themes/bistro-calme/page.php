@@ -1,3 +1,9 @@
+<?php
+if (is_page('contact') ){
+	remove_filter('the_content', 'wpautop');
+}
+?>
+
 <?php get_header(); ?>
 
 <?php get_template_part('template-parts/breadcrumb'); ?>
